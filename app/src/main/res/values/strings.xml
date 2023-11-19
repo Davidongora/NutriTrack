@@ -33,6 +33,10 @@
 <string name="reg">Register</string>
     <string name="Login">already have an account? LOGIN</string>
 
+<!--    search page-->
+    <string name="searchButton">Search</string>
+    <string name="response">we are here to help you suit your nutrition activity</string>
+    <string name="request">search more about nutrition</string>
 
 
 </resources>
