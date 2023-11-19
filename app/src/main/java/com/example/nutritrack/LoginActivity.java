@@ -63,9 +63,9 @@ public class LoginActivity extends AppCompatActivity {
             public void onSuccess(AuthResult authResult) {
                 Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
                 // Navigate to Discover activity
-                Intent intent = new Intent(LoginActivity.this, DiscoverActivity.class);
+                Intent intent = new Intent(LoginActivity.this, SearchActivity.class);
                 startActivity(intent);
-                finish();
+//                finish();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
