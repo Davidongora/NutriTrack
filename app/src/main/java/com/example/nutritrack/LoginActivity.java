@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
 
     private Button loginButton;
+    private Button phoneLoginButton; // Declaration as a class member
     private EditText email;
     private EditText password;
     private FirebaseAuth auth;
@@ -32,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         loginButton = findViewById(R.id.RegisterButton);
+        phoneLoginButton = findViewById(R.id.phone); // Initialize the button from XML
         auth = FirebaseAuth.getInstance();
 
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +42,18 @@ public class LoginActivity extends AppCompatActivity {
                 String txt_email = email.getText().toString();
                 String txt_password = password.getText().toString();
                 loginUser(txt_email, txt_password);
+            }
+        });
+
+        Button phoneLoginButton = findViewById(R.id.phone);
+
+
+        phoneLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start the phone authentication process
+                Intent intent = new Intent(LoginActivity.this, PhoneAuthActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -63,9 +77,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onSuccess(AuthResult authResult) {
                 Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
                 // Navigate to Discover activity
-                Intent intent = new Intent(LoginActivity.this, SearchActivity.class);
+                Intent intent = new Intent(LoginActivity.this, GoalActivity.class);
                 startActivity(intent);
-//                finish();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
