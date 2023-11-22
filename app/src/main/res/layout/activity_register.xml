@@ -24,6 +24,8 @@
         android:ems="10"
         android:hint="@string/email"
         android:inputType="text"
+        android:drawableStart="@drawable/email"
+        android:drawablePadding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +61,9 @@
         android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="@string/password"
-        android:inputType="text"
+        android:inputType="textPassword"
+        android:drawableStart="@drawable/lock"
+        android:drawablePadding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,4 +90,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
