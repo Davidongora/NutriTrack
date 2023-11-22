@@ -1,6 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<!-- exercise_tracker_activity.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Exercise entry fields -->
+    <EditText
+        android:id="@+id/editTextExercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Exercise Name" />
+
+    <EditText
+        android:id="@+id/editTextDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Duration (in minutes)" />
+
+    <EditText
+        android:id="@+id/editTextCaloriesBurned"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Calories Burned" />
+
+    <!-- Buttons for CRUD operations -->
+    <Button
+        android:id="@+id/buttonAddExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Exercise" />
+
+    <Button
+        android:id="@+id/buttonUpdateExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Exercise" />
+
+    <Button
+        android:id="@+id/buttonDeleteExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Exercise" />
+
+    <!-- Exercise log display -->
+    <ListView
+        android:id="@+id/listViewExerciseLog"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
